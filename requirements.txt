@@ -1,0 +1,15 @@
+timm==0.5.4
+Pillow
+blobfile
+mypy
+numpy
+pytest
+requests
+einops
+tensorboardX
+deepspeed==0.9.1
+scipy
+opencv-python
+shapely
+ftfy
+regex
