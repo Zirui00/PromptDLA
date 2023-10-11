@@ -59,71 +59,57 @@ def main(args):
     register_coco_instances(
         "doclaynet_train",
         {},
-        "/copydata/zhangzirui/ocr_layout_analysis/doclaynet_new/COCO/train.json",
-        "/copydata/zhangzirui/ocr_layout_analysis/doclaynet_new/PNG"
+        "../data_prepare/doclaynet_data/COCO/train_document-type.json",
+        "../data_prepare/doclaynet_data/PNG"
     )
 
     register_coco_instances(
         "doclaynet_test",
         {},
-        "/copydata/zhangzirui/ocr_layout_analysis/doclaynet_new/COCO/test.json",
-        "/copydata/zhangzirui/ocr_layout_analysis/doclaynet_new/PNG"
+        "../data_prepare/doclaynet_data/COCO/test_document-type.json",
+        "../data_prepare/doclaynet_data/PNG"
     )
 
     register_coco_instances(
-        "fanyu-low_train",
+        "m6doc_train",
         {},
-        "fanyu_data_low-noise/train/fanyu_annotations_withseg_withdomain_coco_publaynet_train_low-noise.json",
-        "fanyu_data_low-noise/train"
+        "../data_prepare/m6doc_data/COCO/instances_train2017_document-type.json",
+        "../data_prepare/m6doc_data/train2017"
     )
 
     register_coco_instances(
-        "fanyu-high_train",
+        "m6doc_test",
         {},
-        "fanyu_data/train/fanyu_doc-cate_withseg_publaynet_train.json",
-        "fanyu_data/train"
-    )
-
-    register_coco_instances(
-        "fanyu-low_val",
-        {},
-        "fanyu_data_low-noise/val/fanyu_annotations_withseg_withdomain_coco_publaynet_val_low-noise.json",
-        "fanyu_data_low-noise/val"
+        "../data_prepare/m6doc_data/COCO/instances_test2017_document-type.json",
+        "../data_prepare/m6doc_data/test2017"
     )
 
     register_coco_instances(
         "publaynet-doc_mini_train",
         {},
-        "ocr_layout_analysis/publaynet_data/publaynet/mini_train_pub_and_doc_label-domain.json",
-        "ocr_layout_analysis/publaynet_data/publaynet/train"
+        "../data_prepare/publaynet_data/train_mini_label-style.json",
+        "../data_prepare/publaynet_data/train"
     )
 
     register_coco_instances(
         "publaynet-doc_val",
         {},
-        "ocr_layout_analysis/publaynet_data/publaynet/val_pub_and_doc_label-domain.json",
-        "ocr_layout_analysis/publaynet_data/publaynet/val"
+        "../data_prepare/publaynet_data/val_mini_label-style.json",
+        "../data_prepare/publaynet_data/val"
     )
 
     register_coco_instances(
         "doclaynet-pub_train",
         {},
-        "ocr_layout_analysis/doclaynet_data/COCO/train_doclay_and_pub_label-domain.json",
-        "ocr_layout_analysis/doclaynet_data/PNG"
+        "../data_prepare/doclaynet_data/COCO/train_label-style.json",
+        "../data_prepare/doclaynet_data/PNG"
     )
 
     register_coco_instances(
         "doclaynet-pub_test",
         {},
-        "ocr_layout_analysis/doclaynet_data/COCO/test_doclay_and_pub_label-domain.json",
-        "ocr_layout_analysis/doclaynet_data/PNG"
-    )
-
-    register_coco_instances(
-        "docbank-joint_test",
-        {},
-        "ocr_layout_analysis/docbank_data/anotations/500K_test_joint_domain.json",
-        "ocr_layout_analysis/docbank_data/images/DocBank_500K_ori_img"
+        "../data_prepare/doclaynet_data/COCO/val_label-style.json",
+        "../data_prepare/doclaynet_data/PNG"
     )
 
     cfg = setup(args)

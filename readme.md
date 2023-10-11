@@ -116,6 +116,14 @@ python publaynet_label-style.py --annotations doclaynet_data/COCO/test.json
 
 Then you will get file "[origin-name]_label-style.json"
 
+Another important thing is that, since the objects in PubLayNet is three times more than those in DocLayNet, to prevent
+the bias when training, we down scale the size of PubLayNet into 1/3.
+
+```bash
+python mini_publaynet.py --annotations publaynet_data/train_label-style.json
+python mini_publaynet.py --annotations publaynet_data/train_label-style.json
+```
+Then you will get file "[train/val]_mini_label-style.json"
 ## Obtain Prompt
 
 ```bash
@@ -177,12 +185,13 @@ python train_net.py --dataset doclaynet --config-file configs/doclaynet_configs/
 
 ## Pre-trained Models
 
-| Model                               | Model Name (Path)                                                                                                                                                                                                                | 
-|-------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Model                               | Model Name (Path)                                                                                                                                                                                                                          | 
+|-------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Pre-trained weights from DiT        | [DiT_base](https://layoutlm.blob.core.windows.net/dit/dit-pts/dit-base-224-p16-500k-62d53a.pth?sv=2022-11-02&ss=b&srt=o&sp=r&se=2033-06-08T16:48:15Z&st=2023-06-08T08:48:15Z&spr=https&sig=a9VXrihTzbWyVfaIDlIT1Z0FoR1073VB0RLQUMuudD4%3D) |
-| Pre-trained weights from LayoutLMv3 | [LayoutLMv3_base](https://huggingface.co/microsoft/layoutlmv3-base) |
+| Pre-trained weights from LayoutLMv3 | [LayoutLMv3_base](https://huggingface.co/microsoft/layoutlmv3-base)                                                                                                                                                                        |
 
-Our methods are primarily implemented on DiT pre-trained model, but we also get a promotion on other pre-trained model such as LayoutLMv3. If you want to test our method on LayoutLMv3, feel free to contact us.
+Our methods are primarily implemented on DiT pre-trained model, but we also get a promotion on other pre-trained model
+such as LayoutLMv3. If you want to test our method on LayoutLMv3, feel free to contact us.
 
 ## Training
 
